@@ -1,3 +1,5 @@
+CTFd site: http://10.50.43.161
+
 #Commands
 !!                                                             -run the last command
 !#                                                             -run the command indicated by the number
@@ -65,7 +67,8 @@ cut                                                            -used to remove d
 #Brace Expansion
   -used to more efficiently run multiple commands at a time
   -ex: mkdir test{1..5}  -runs iterations of mkdir up to 5 creating the files test1, test2, etc.
-  
-.bashrc                                                          -file allowing for the changing of native setup for logged in user
 
+#Recommendations
+  - .bashrc                                                       -file allowing for the changing of native setup for logged in user
+  -
 
