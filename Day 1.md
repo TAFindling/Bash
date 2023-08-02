@@ -51,9 +51,22 @@ grep                                                           -searches for lin
 cut                                                            -used to remove data from files based on specified arguments
     -Example: tail -1 passwd | cut -d: -f3                     -cuts field 3 from the passwd file starting/ending at the colons surrounding it
   --output-delimiter+''                                        -changes the delimiter used when printing to the screen
-  
+alias -view all aliases
+sort                                                           -sort content according to ascii table position
+  -n                                                           -numerically
+  -u                                                           -uniquely
+  -nr                                                          -reverse numerically
+  -t'+'                                                        -specify field separator '+'
+uniq                                                           -report/omit repeat lines/values
+  -c                                                           -select content (has to be sorted) and return number of instances it appears
+  -u                                                           -shows only unique lines (no repeats)
+  -d                                                           -shows only lines with duplicates
+awk                                                            -pattern scanning/language processing
+    awk [options] 'selection _criteria {action}' input-file > output-file
+  -F: '{print $1}'                                                           -displays first fireld based on delimiter
 
-  
+
+
 #Order of Operations
   1. Redirection
   2. Alias
@@ -68,7 +81,5 @@ cut                                                            -used to remove d
   -used to more efficiently run multiple commands at a time
   -ex: mkdir test{1..5}  -runs iterations of mkdir up to 5 creating the files test1, test2, etc.
 
-#Recommendations
-  - .bashrc                                                       -file allowing for the changing of native setup for logged in user
-  -
+
 
