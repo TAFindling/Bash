@@ -100,6 +100,14 @@ sed                                                            -stream editor, f
   elif [[condition]]; then commands
   else commands
   fi
-    if comparing letters use symbols                                      -'== or !='
-    else use letters                                                      -'-eq or -ne'
+    if comparing letters use symbols                                            -'== or !='
+    else use letters                                                            -'-eq or -ne'
+
+#Command Substitution
+  -used to substitute the output of a command to a variable or another command
+    -VAR=$(command)                                                              -substitutes output of command as value of VAR
+  ""                                                                             -expands variable (run command, substitute value, etc.)
+  ''                                                                             -prints literal
+
+
 
