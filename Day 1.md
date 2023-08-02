@@ -106,8 +106,10 @@ sed                                                            -stream editor, f
 #Command Substitution
   -used to substitute the output of a command to a variable or another command
     -VAR=$(command)                                                              -substitutes output of command as value of VAR
-  ""                                                                             -expands variable (run command, substitute value, etc.)
-  ''                                                                             -prints literal
+    -command $(command)
+    -VAR=`command'
+  -""                                                                             -expands variable (run command, substitute value, etc.)
+  -''                                                                             -prints literal
 
 
 
