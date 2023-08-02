@@ -15,7 +15,7 @@ man                                                            -opens help pages
   //?/&/n/q                                                    -used to search forward/backward for line//jumps to next pattern match/quit man
   []                                                           -denotes optional triggers
 curl "website"                                                 -used to view web pages within a command shell
- >                                                             -used to redirect output of a command ( curl cht.sh/grep > file.txt)
+ ">"                                                             -used to redirect output of a command ( curl cht.sh/grep > file.txt)
 alias                                                          -used to associated words/letters with a given command
 function                                                       -used to associate an entry with a given function
 type -a                                                        -used to find out what a command is (function/alias/etc)
