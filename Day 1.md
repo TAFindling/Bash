@@ -63,7 +63,13 @@ uniq                                                           -report/omit repe
   -d                                                           -shows only lines with duplicates
 awk                                                            -pattern scanning/language processing
     awk [options] 'selection _criteria {action}' input-file > output-file
-  -F: '{print $1}'                                                           -displays first fireld based on delimiter
+  -F: '{print $1}'                                             -displays first fireld based on delimiter
+sed                                                            -stream editor, filters/changes text
+  - 's/abc/123/'                                               -replaces 1st occurrence of abc in every line with 123
+  - 's/abc/123/g'                                              -replaces every occurrence of abc in every line with 123
+  - '/sus/d'                                                   -delete the sus lines. Output everything else
+  - '-i '<expression>' file.txt                                -"sed inplace" makes changes permanent in file.txt
+  -  '/G'                                                      -adds a newline character
 
 
 
@@ -81,5 +87,19 @@ awk                                                            -pattern scanning
   -used to more efficiently run multiple commands at a time
   -ex: mkdir test{1..5}  -runs iterations of mkdir up to 5 creating the files test1, test2, etc.
 
+#Conditionals
+  -e                                                                      -file exists? (T/F)
+  -f                                                                      -file exists and is a regular file
+  -d                                                                      -file exists and is a directory
+  ==                                                                      -strings, is equal to strings
+  -eq                                                                     -numbers, is equal to
+  -!=                                                                     -strings, is NOT equal to
 
+#IF STATEMENTS
+  if [[condition]]; then commands
+  elif [[condition]]; then commands
+  else commands
+  fi
+    if comparing letters use symbols                                      -'== or !='
+    else use letters                                                      -'-eq or -ne'
 
