@@ -137,7 +137,7 @@ sed                                                            -stream editor, f
            echo "this is MyFunction"
         }
          myfunct() {
-           echo "myfuc"
+           echo "myfunct"
        }
        function AFunc() {
          echo "Another Function"
