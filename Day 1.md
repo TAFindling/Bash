@@ -112,4 +112,97 @@ sed                                                            -stream editor, f
   -''                                                                             -prints literal
 
 
+#Parameters
+  Store values and can be:
+    name (variable)
+    number (positional)
+    special char (special parameter)
+      $#                                                                          -Number of args passed to script
+      $0                                                                          -Script Name
+      $i                                                                          -Represents the ith arg passed to shell script
+      $*                                                                          -Represents all args passed to the shell separated by spaces
+      $!                                                                          -PID of last background process
+      $?                                                                          -Exit status of last executed command
+      $_                                                                          -Last arg to last executed command
+      $$                                                                          -PID of current shell
+      $@                                                                          -All args of script treated as an array
+      $-                                                                          -Current flags set in your script
 
+
+#Functions
+  Series of commands executed as if a single command
+  Declare the function, then call it
+    Ways to format a function block:"
+        function MyFunction {
+           echo "this is MyFunction"
+        }
+         myfunct() {
+           echo "myfuc"
+       }
+       function AFunc() {
+         echo "Another Function"
+      }
+  Call the function with  
+    Example:
+      folder() {
+        if [ ! -s $1 ];  then
+          mkdir $1
+        else
+          echo "whoa stop!
+          return 1
+        fi
+        }
+        folder $1
+      Run with ./folder "filename"
+
+
+Example:
+function getuserchoice() {
+echo "Make a choice [1,2,3]:"
+read userchoice
+case $userchoice in
+(1) echo one ;;
+(2) echo two ;;
+(3) echo three ;;
+(*) echo other ;;
+esac
+}
+getuserchoice
+
+
+#Variable Substitution
+  Example:
+    A=$1
+    echo The story of Robert the $A
+    echo The $A was at the "$A" store so we could buy $A clothes!
+
+  sub1() {
+    #Simple Variable Substitution
+    name="john"
+    echo $name
+  }
+  sub2() {
+    #Variable sub in quotes
+    name="John"
+    echo "My name is $name"
+  }
+  sub3() {
+    #Variable sub in single quotes
+    name="John"
+    echo 'My name is $name'
+  }
+  sub4() {
+    #Using curly brackets with variable sub
+    name="Hohoh"
+    echo "My name is $nameho"
+    echo "My name is ${name}ho"
+  }
+  sub5() {
+    #Extra curly brackets
+    name="Johnny!"
+    echo ${name:2:4}
+  }
+
+
+  
+  
