@@ -204,5 +204,62 @@ getuserchoice
   }
 
 
-  
-  
+#Bash Loops
+  ##For Loop
+    for item in [list]                                    -List can be strings separated by spaces, range of numbers, output of command, array, etc.
+    do
+    [commands]
+    done
+    
+  ##Break/Continue
+    if [[condition]];then
+    break                                                 -Terminates loop after a condition is met
+    fi
+    if [[condition]];then
+    continue                                              -Continues with next iteration of loop
+    fi
+
+  ##While/Until Loop
+    counter=1
+    while [[ $counter -le 10 ]]
+    do
+      echo $counter
+      ((counter++))
+    done
+    echo "All done!"
+
+  counter=1
+  until [[ $counter -gt 10 ]]
+  do
+    echo $counter
+    ((counter++))
+  done
+  echo "All done!"
+
+
+#EXAMPLES
+  ##Loops
+    T1(){
+    for x in {a,b,1,2}
+    do
+      echo $x
+    done
+    }
+    T2(){
+    x=0
+    while [[ $x -le 10 ]]; do echo $x; x = $(($x+1))
+    if [[ $x -eq 8 ]]; then break; fi; done
+    }
+    T3(){
+    echo "From T3 count"
+    for ((x=0;x<=5;x++))
+    do
+    if [[$x == 4]];then 
+      continue
+    fi
+      echo "\$x is equal to $x"
+      done
+      }
+    T1
+    T2
+    T3
